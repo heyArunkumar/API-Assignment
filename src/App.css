@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.Cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto auto ;
+  margin-top: 14px;
+  margin-left: 50px;
+  cursor: pointer;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width:360px){
+  .Cards{
+    grid-template-columns: auto  !important;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width:768px){
+  .Cards{
+    grid-template-columns: auto auto !important;
+  }
+}
+@media (max-width:1024px){
+  .Cards{
+    grid-template-columns: auto auto auto ;
+  }
+}
+.product_img{
+  width: 70% !important;
+  height: 200px !important;
+}
+.product_image{
+  width: 90% !important;
+  height: 350px !important;
+}
+.ant-card-cover{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.ant-card-bordered{
+  border: 3px solid #f0f0f0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.ant-menu {
+  font-size: 23px !important;
+  font-weight: bold !important;
+  color: black !important;
+}
+.product{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+.ant-card .ant-card-bordered .ant-card-hoverable{
+  width: 80vw !important ;
+  display: flex !important;
+}
+.product_card{
+  width: 80vw !important;
+}
+@media (max-width:560px){
+  .product_card{
+    flex-direction: column !important;
   }
-  to {
-    transform: rotate(360deg);
+  .product{
+    height: 100vh;
+  }
+  .product_image{
+    width: 70% !important;
+    height: 220px !important;
   }
 }
